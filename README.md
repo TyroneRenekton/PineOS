@@ -9,3 +9,5 @@ mac -> docker -> centos -> bochs
 * 停止容器 dokcer stop 容器id
 * 主机传输文件给容器 docker cp /path container_id:/path
 
+# 加载MBR
+

@@ -11,3 +11,6 @@ mac -> docker -> centos -> bochs
 
 # 加载MBR
 
+# bochs调试命令
+x/n 物理地址，查看机器码
+disasm/n 线性地址 ，查看命令

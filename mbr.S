@@ -5,26 +5,26 @@ SECTION MBR vstart=0x7c00
 	mov ss, ax
 	mov fs, ax
 	mov sp, 0x7c00
-
-	mov ax, 0x600	
-	mov bx, 0x700	
+	mov ax, 0xb800
+	mov gs, ax
+	
+	mov ax, 0600h
+	mov bx, 0700h
 	mov cx, 0
-	mov dx, 0x184f
-	int 0x10
+	mov dx, 184fh
+	int 10h	
 
-	mov ah, 3
-	mov bh, 0
-	int 0x10
+	mov byte [gs:0x00], '2'
+	mov byte [gs:0x01], 0xA4
+	mov byte [gs:0x02], ' '
+	mov byte [gs:0x03], 0xA4
+	mov byte [gs:0x04], 'M'
+	mov byte [gs:0x05], 0xA4
+	mov byte [gs:0x06], 'B'
+	mov byte [gs:0x07], 0xA4
+	mov byte [gs:0x08], 'R'
+	mov byte [gs:0x09], 0xA4
 
-	mov ax, message
-	mov bp, ax
-	
-	mov cx, 5
-	mov ax, 0x1301	
-	
-	mov bx, 0x2
-
-	int 0x10
 	jmp $
 
 	message db "1 MBR"

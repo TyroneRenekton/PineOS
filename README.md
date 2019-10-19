@@ -14,3 +14,11 @@ mac -> docker -> centos -> bochs
 # bochs调试命令
 x/n 物理地址，查看机器码
 disasm/n 线性地址 ，查看命令
+
+# 分页
+
+# 分页查命令地址
+jmp $
+r 查看ip寄存器
+
+

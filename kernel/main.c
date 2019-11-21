@@ -1,4 +1,6 @@
-int main() {
+#include "print.h"
+void main(void) {
+	put_int(123);
 	while(1);
-	return 0;
+
 }
